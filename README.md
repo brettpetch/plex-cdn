@@ -47,7 +47,7 @@ From here, we're going to create the record, it will be a SIMPLE A record for `v
 Basically we should have
 
 ```plaintext
-vps1.us.example.com  A      Simple       -        <YOUR_BOUNCER_IP>
+vps1.sg.example.com  A      Simple       -        <YOUR_BOUNCER_IP>
 srv1.example.com     A      Simple       -        <YOUR_IPv4_ADDRESS>
 srv1.example.com     AAAA   Simple       -        <YOUR_IPv6_ADDRESS>
 *.cdn.example.com    CNAME  Geolocation  Default  srv1.example.com
