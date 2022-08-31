@@ -17,7 +17,7 @@ Shit you say? I wonder why... Some guy I know, describes peering as follows:
 >
 > Some highways have 2 lanes, some have 4, some have 6 - Some are very congested on Mondays, some are not.
 >
-> Imagine that you live in Miami, and your ISP(Trucking company) sends their goods via the i-95 to Boston everyday with no problem, and have done so for over a year now.
+> Imagine that you live in Miami, and your ISP (Trucking company) sends their goods via the i-95 to Boston everyday with no problem, and have done so for over a year now.
 >
 > However, for some reason in 2019 during February, some meteor crashed into the i95 causing damage to 2 of the 4 available lanes, which in turn resulted in congestion on the i95 because the throughput is now much less then what it normally is.
 >
