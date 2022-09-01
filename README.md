@@ -28,8 +28,8 @@ Shit you say? I wonder why... Some guy I know, describes peering as follows:
 
 ## Requirements
 
-- An AWS account (with billing and a hosted zone), that's right you cheap fuck... Get off your wallet.
-- A few servers laying around (ideally 1gbps+)
+- An AWS account (with billing and a hosted zone).
+- A few servers laying around (ideally 1gbps+).
 - A number of beverages (preferably beers, find a nice IPA...)
 
 ## AWS Config
