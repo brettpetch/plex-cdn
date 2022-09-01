@@ -2,6 +2,12 @@
 
 So... you alike me, brave traveler have ended up here in search of a way to make your Plex Media Server instance peer better between you and your host. Worry not, we have been working on this as our pet project for months and will give you the crash course on how this fucking thing works.
 
+## Requirements
+
+- An AWS account (with billing and a hosted zone).
+- A few servers laying around (ideally 1gbps+).
+- A number of beverages (preferably beers, find a nice IPA...)
+
 ## Why the fuck would you bother?
 
 Well... how's that Plex experience in the US from your server overseas?
@@ -29,12 +35,6 @@ I personally host my Plex offshore. The price of storage is so low that tossing 
 By dynamically routing traffic in this manner you are able to ignore ISP prioritization by masking video as normal traffic and cache images at the edge for a better experience.
 
 While there are ways to commercialize this, I don’t have a reason to really. It’s simply something that I wanted to do to speed up page loads and bounce a few instances for friends (who use traefik, nginx, and caddy) through the setup.
-
-## Requirements
-
-- An AWS account (with billing and a hosted zone).
-- A few servers laying around (ideally 1gbps+).
-- A number of beverages (preferably beers, find a nice IPA...)
 
 ## UML Diagram
 
