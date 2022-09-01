@@ -2,10 +2,6 @@
 
 So... you alike me, brave traveler have ended up here in search of a way to make your Plex Media Server instance peer better between you and your host. Worry not, we have been working on this as our pet project for months and will give you the crash course on how this fucking thing works.
 
-## About me
-
-I am a recent grad from Western University, where I studied Media, Information, and Technoculture; or as you might know it "Media Studies." Now I've graduated with crippling amounts of student debt, and instead of paying it all off... I ended up building a CDN and writing this guide that you're reading now... If this was a help to you, please consider [checking out my GH Sponsors Page](https://github.com/sponsors/brettpetch).
-
 ## Why the fuck would you bother?
 
 Well... how's that Plex experience in the US from your server overseas?
@@ -154,3 +150,7 @@ Rox, for the amazing little ditty that makes plex cache images on the edge
 The [Swizzin Project](https://github.com/swizzin/swizzin) for NGINX install, PHP configs
 
 You for making this possible.
+
+## About me
+
+I am a recent grad from Western University, where I studied Media, Information, and Technoculture; or as you might know it "Media Studies." Now I've graduated with crippling amounts of student debt, and instead of paying it all off... I ended up building a CDN and writing this guide that you're reading now... If this was a help to you, please consider [checking out my GH Sponsors Page](https://github.com/sponsors/brettpetch).
