@@ -109,7 +109,7 @@ cp /srv/librespeed/example-singleServer-gauges.html /srv/librespeed/index.html
 chown www-data: /srv -R
 ```
 
-In this repo, you'll find a configuration file called `magic.conf`. This deals with the proxying of `srv1.example.com` to `srv1.cdn.example.com`. Essentially, we're going to take the value of `$host` in the request, and map it to the `$og_host`. This means that, in essence you will be setting the first value to `srv1.cdn.example.com` and the second value to `srv1.example.com`.
+In this repo, you'll find a configuration file called `magic.conf`. This deals with the proxying of `srv1.example.com` to `srv1.cdn.example.com`. Essentially, we're going to take the value of `$host` in the request, and map it to the `$og_host`. This means that, in essence you will be setting the first value to `srv1.cdn.example.com` and the second value to `srv1.example.com`. You need to either create 2 configs on the host? 9or be able to use wildcard certs to allow it to serve both on the normal and CDN configs  to create a normal config, copy the cdn config, remove the block for images, then change all instances of `og_host` to `host`.
 
 Because `plex-cdn.conf` `include snippets/magic.conf`, it's going to proxy the request, and replace `$og_host` in all instances with `srv1.example.com`. This configuration is SNI compliant, and will forward the appropriate SSL details from the host, allowing you to use a secondary host, like Traefik on a Saltbox instance to host the Plex. We also include a speedtest (via librespeed) for our users so they can speedtest and we can gether diagnostic data if something is wrong.
 
