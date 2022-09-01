@@ -143,6 +143,10 @@ This will cache any transcoded images on the edge for the duration of its TTL, w
 
 You'll need at a minimum a 1 Plex server, 1 instance of nginx running beside that Plex server, and 1 external server (IE a VPS) to effectively route traffic the way that this guide describes. If you have the ability, I'd try for a VPS in each region, after testing throughput to your origin and to your clients.
 
+> But wait... Couldn't I just use a 302 to the correct server for the region and not pay for R53?
+
+From my testing, this didn't work. It failed spectacularly. If you can get this to work, do give me a shout. I could be wrong, but my experience was that Plex client applications would not respond to 302s with rewrites from GeoIP DB mappings.
+
 ## Special Thanks
 
 Rox, for the amazing little ditty that makes plex cache images on the edge
