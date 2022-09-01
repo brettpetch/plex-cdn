@@ -127,6 +127,6 @@ If you're already running swizzin, this should be fairly simple to get going sid
 
 Rox, for the amazing little ditty that makes plex cache images on the edge
 
-The Swizzin Project for NGINX install, PHP configs
+The [Swizzin Project](https://github.com/swizzin/swizzin) for NGINX install, PHP configs
 
 You for making this possible.
