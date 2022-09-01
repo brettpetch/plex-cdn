@@ -26,11 +26,23 @@ Shit you say? I wonder why... Some guy I know, describes peering as follows:
 > Some trucking companies might re-route the trucks away from the i95, and onto regular roads, but regular roads don't have the capacity or speed limits that the highway does, so this also results in delays going from Miami to Boston, resulting in slower speeds in terms of trucks getting from A to B.
 > As you can probably imagine, peering issues based on the illustration below can be sporadic - They can happen at anytime, and they can last for no more then a few hours, up to days or in really bad cases, months.
 
+Basically we're going to proxy and cache (images) as they're requested. Using some of the persistent storage at the edge. You'll need to modify your nginx config (see the one that's in here for what to change).
+
+I personally host my Plex offshore. The price of storage is so low that tossing a US bouncer on is far cheaper than hosting it in the US entirely. Especially with the peering issues that places like WebNX, and in my experience, OVH have had connecting directly to storage.
+
+By dynamically routing traffic in this manner you are able to ignore ISP prioritization by masking video as normal traffic and cache images at the edge for a better experience.
+
+While there are ways to commercialize this, I don’t have a reason to really. It’s simply something that I wanted to do to speed up page loads and bounce a few instances for friends (who use traefik, nginx, and caddy) through the setup.
+
 ## Requirements
 
 - An AWS account (with billing and a hosted zone).
 - A few servers laying around (ideally 1gbps+).
 - A number of beverages (preferably beers, find a nice IPA...)
+
+## UML Diagram
+
+![CDN Configuration](https://raw.githubusercontent.com/brettpetch/plex-cdn/main/cdn.png)
 
 ## AWS Config
 
@@ -119,9 +131,21 @@ Basically, you'll need to dump the contents of this repository into `/etc/nginx/
 
 If you're already running swizzin, this should be fairly simple to get going side-by-side.
 
-## UML Diagram
+In Plex, you need to change the advanced network settings to use the custom host `https://srv1.cdn.example.com:443,http://srv1.cdn.example.com:80` if you want it to use the dynamic routing. This is the url that is reported to clients. You'll also need remote access disabled, and an nginx config for plex itself (not a cdn config)
 
-![CDN Configuration](https://raw.githubusercontent.com/brettpetch/plex-cdn/main/cdn.png)
+## FAQ
+
+> What kind of cost does this incur?
+
+As already mentioned, I run 2 domains and it costs about $4.20/mo for GeoDNS resolution. On top of that, you've got however many droplets / VPSes that you decide to use. I'd recommend at least one in each continent.
+
+> I’m assuming it doesn’t cache things like video previews right? 
+
+This will cache any transcoded images on the edge for the duration of its TTL, which Plex sets upstream. It will respect this.
+
+> How many servers do I need?
+
+You'll need at a minimum a 1 Plex server, 1 instance of nginx running beside that Plex server, and 1 external server (IE a VPS) to effectively route traffic the way that this guide describes. If you have the ability, I'd try for a VPS in each region, after testing throughput to your origin and to your clients.
 
 ## Special Thanks
 
