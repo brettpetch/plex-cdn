@@ -149,7 +149,7 @@ From my testing, this didn't work. It failed spectacularly. If you can get this 
 
 ## Special Thanks
 
-Rox, for the amazing little ditty that makes plex cache images on the edge
+[Rox](https://github.com/Roxedus), for the amazing little ditty that makes plex cache images on the edge
 
 The [Swizzin Project](https://github.com/swizzin/swizzin) for NGINX install, PHP configs
 
