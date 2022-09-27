@@ -127,6 +127,18 @@ Basically, you'll need to dump the contents of this repository into `/etc/nginx/
 
 If you're already running swizzin, this should be fairly simple to get going side-by-side.
 
+### SWAG Setup
+
+SWAG introduces a number of new issues, one of which being that you can't do unlimited depth in subdomaining easily.
+
+As an alternative solution, you can instead create a new config (copy plex.subdomain.conf.example) and create a second file called plex-cdn.subdomain.conf. 
+
+Inside this file, change the server_name to plex-cdn.*
+
+Then leave everything else the same. On AWS Route53, you'll also need to change the geodns records to plex-cdn. ENSURE THAT YOU HAVE A DEFAULT RECORD FOR plex-cdn! Otherwise it can break domain name resolution in other countries. 
+
+### Final Notes
+
 In Plex, you need to change the advanced network settings to use the custom host `https://srv1.cdn.example.com:443,http://srv1.cdn.example.com:80` if you want it to use the dynamic routing. This is the url that is reported to clients. You'll also need remote access disabled, and an nginx config for plex itself (not a cdn config)
 
 ## FAQ
