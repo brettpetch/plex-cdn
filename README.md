@@ -8,11 +8,11 @@ So... you alike me, brave traveler have ended up here in search of a way to make
 - A few servers laying around (ideally 1gbps+).
 - A number of beverages (preferably beers, find a nice IPA...)
 
-## Why the fuck would you bother?
+## Why the would you bother?
 
 Well... how's that Plex experience in the US from your server overseas?
 
-Shit you say? I wonder why... Some guy I know, describes peering as follows:
+Not great you say? I wonder why... Some guy I know, describes peering as follows:
 
 > Peering issues simply mean that somewhere along the route between point A and point B, there's some congestion or fault drastically reducing the speed at which traffic can pass between both points.
 > Imagine that all internet providers in the world, are trucking companies - They use highways to deliver their goods from the origin location to its destination.
