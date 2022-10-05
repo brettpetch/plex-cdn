@@ -8,7 +8,7 @@ So... you alike me, brave traveler have ended up here in search of a way to make
 - A few servers laying around (ideally 1gbps+).
 - A number of beverages (preferably beers, find a nice IPA...)
 
-## Why the would you bother?
+## Why bother?
 
 Well... how's that Plex experience in the US from your server overseas?
 
