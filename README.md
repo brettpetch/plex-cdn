@@ -77,7 +77,7 @@ curl https://get.acme.sh | sh
 
 ## NGINX Configuration
 
-Before we get into the thick of it, lets get nginx installed.
+Before we get into the thick of it, lets get nginx installed. If you are running Swizzin, ignore the nginx install method and slide on down.
 
 ```bash
 sudo su -
